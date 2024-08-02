@@ -23,8 +23,6 @@ API_ID = int(environ.get("API_ID", "19067052"))
 API_HASH = environ.get("API_HASH", "f2205657fd3b0b40e9a0b11aac366656")
 BOT_TOKEN = environ.get("BOT_TOKEN", "7136473319:AAGL2SY_jSgIwXzqbbk0oT4S42Jyd8h6u-c")
 
-AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1001838119618').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
-
 PICS = (environ.get('PICS', 'https://desileaks.in/wp-content/uploads/2024/08/5d0ac3e9-73d0-485f-901a-871bf6ea09cb.jpg')).split() # Bot Start Picture
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1871899094 6866849202').split()]
 BOT_USERNAME = environ.get("BOT_USERNAME", "baguthacha_bot") # without @
@@ -60,6 +58,9 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), Fals
 
 # Verify Info :-
 VERIFY_MODE = bool(environ.get('VERIFY_MODE', False)) # Set True or False
+
+# AUTH CHANNEL
+AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1001838119618').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
 
 # If Verify Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 SHORTLINK_URL = environ.get("SHORTLINK_URL", "api.shareus.io") # shortlink domain without https://
