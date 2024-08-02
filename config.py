@@ -16,6 +16,8 @@ def is_enabled(value, default):
         return False
     else:
         return default
+
+AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1001838119618').split()]
       
 # Bot Information
 API_ID = int(environ.get("API_ID", "19067052"))
