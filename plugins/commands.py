@@ -8,7 +8,6 @@ from plugins.dbusers import db
 from pyrogram import Client, filters, enums
 from plugins.users_api import get_user, update_user_info
 from plugins.database import get_file_details
-from info import AUTH_CHANNEL
 from pyrogram.errors import *
 from pyrogram.types import *
 from utils import verify_user, check_token, check_verification, get_token
