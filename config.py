@@ -58,7 +58,7 @@ SHORTLINK_URL = environ.get("SHORTLINK_URL", "") # shortlink domain without http
 SHORTLINK_API = environ.get("SHORTLINK_API", "") # shortlink api
 VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "") # how to open link 
 
-AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1001838119618').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
+AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002014891006').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
 
 # Website Info:
 WEBSITE_URL_MODE = bool(environ.get('WEBSITE_URL_MODE', False)) # Set True or False
