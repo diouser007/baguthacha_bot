@@ -12,8 +12,6 @@ def is_enabled(value, default):
     else:
         return default
 
-AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002014891006').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
-      
 # Bot Information
 API_ID = int(environ.get("API_ID", "19067052"))
 API_HASH = environ.get("API_HASH", "f2205657fd3b0b40e9a0b11aac366656")
@@ -41,6 +39,8 @@ AUTO_DELETE_MODE = bool(environ.get('AUTO_DELETE_MODE', True)) # Set True or Fal
 # If Auto Delete Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 AUTO_DELETE = int(environ.get("AUTO_DELETE", "30")) # Time in Minutes
 AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "1800")) # Time in Seconds
+
+AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002014891006').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
 
 # Channel Information
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002090853196"))
