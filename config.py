@@ -11,6 +11,8 @@ def is_enabled(value, default):
         return False
     else:
         return default
+
+AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002014891006').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
       
 # Bot Information
 API_ID = int(environ.get("API_ID", "19067052"))
@@ -57,8 +59,6 @@ VERIFY_MODE = bool(environ.get('VERIFY_MODE', False)) # Set True or False
 SHORTLINK_URL = environ.get("SHORTLINK_URL", "") # shortlink domain without https://
 SHORTLINK_API = environ.get("SHORTLINK_API", "") # shortlink api
 VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "") # how to open link 
-
-AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002014891006').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
 
 # Website Info:
 WEBSITE_URL_MODE = bool(environ.get('WEBSITE_URL_MODE', False)) # Set True or False
